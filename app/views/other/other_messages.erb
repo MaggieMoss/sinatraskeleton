@@ -1,9 +1,7 @@
-<% @messages.each do |message| %>
+<% @message.each do |message| %>
   <div class="message">
-    <h3><a href="/messages/<%= message.id %>"> <%= "to message" %> </a>
     	</br>
-    	<small><a href ="/other/<%= message.author %>">
-    	(by: <%= message.author %>)</small></a>
+    	<small><a href ="/messages/<%= message.author %>">(by: <%= message.author %>)</small>
     	<small>(url: <%= message.url %>) </small>
     	<small>(created at: <%= message.created_at %>)</small>
     </h3>
@@ -13,3 +11,4 @@
   </div>
 <% end %>
 
+<a href = "/messages"> Back to All </a>

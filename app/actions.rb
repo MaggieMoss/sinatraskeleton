@@ -25,8 +25,13 @@ post '/messages' do
 	end 
 end 
 
+
 get '/messages/:id' do 
 	@message = Message.find params[:id]
 	erb :'messages/show'
 end 
 
+get '/other/:author' do 
+	@message = Message.where(author: params[:author])
+	erb :'other/other_messages'
+end 
